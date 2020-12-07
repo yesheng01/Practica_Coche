@@ -11,10 +11,16 @@ public class Cotxe_Sheng_Ye extends CotxeAbstracte implements InterfaceCotxe {
 
     protected EstatsMotorCotxe estadocoche;
 
+    //Constructor
+
+
     public Cotxe_Sheng_Ye(String marca, String model, TipusCanvi tipusCanvi, EstatsMotorCotxe estadocoche) {
         super(marca, model, tipusCanvi);
         this.estadocoche = estadocoche;
     }
+
+    //Methods
+
     @Override
     public void arrancarMotor() throws Exception {
         if (estadocoche == EstatsMotorCotxe.Aturat) {
