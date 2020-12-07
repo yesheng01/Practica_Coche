@@ -14,7 +14,7 @@ public class TestCotxe_Sheng_Ye {
             System.out.println(coche.estadocoche);
             coche.arrancarMotor();
             System.out.println(coche.estadocoche);
-            System.out.println(coche.getRevolucions());
+            System.out.println("Tiene:" + coche.getRevolucions());
             coche.aturarMotor();
             System.out.println(coche.estadocoche);
         } catch (Exception e){
