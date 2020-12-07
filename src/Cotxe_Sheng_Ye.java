@@ -15,13 +15,14 @@ public class Cotxe_Sheng_Ye extends CotxeAbstracte implements InterfaceCotxe {
         super(marca, model, tipusCanvi);
         this.estadocoche = estadocoche;
     }
-
+    @Override
     public void arrancarMotor() throws Exception {
         if (estadocoche == EstatsMotorCotxe.Aturat) {
             this.estadocoche = EstatsMotorCotxe.EnMarxa;
         } else {
             throw new Exception("Arrancado");
         }
+        System.out.println("Arrancado");
     }
 
     @Override
@@ -32,7 +33,7 @@ public class Cotxe_Sheng_Ye extends CotxeAbstracte implements InterfaceCotxe {
     @Override
     public int getRevolucions() {
         if (estadocoche == EstatsMotorCotxe.Aturat) {
-            return 0;
+            return  0;
         }
         else{
             Random numerorandom = new Random();
@@ -47,6 +48,7 @@ public class Cotxe_Sheng_Ye extends CotxeAbstracte implements InterfaceCotxe {
         }
         else{
             this.estadocoche = EstatsMotorCotxe.Aturat;
+            System.out.println("Esta parado");
         }
     }
 }
