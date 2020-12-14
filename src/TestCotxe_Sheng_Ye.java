@@ -8,25 +8,40 @@
  **/
 public class TestCotxe_Sheng_Ye {
     public static void main(String[] args) {
-        // Se crea la instancia
-        Cotxe_Sheng_Ye coche = new Cotxe_Sheng_Ye("Audi" , "A1" , TipusCanvi.CanviManual , EstatsMotorCotxe.Aturat);
-
-        //Methods y salida para la comprobacion
-
-
+        CotxeSegonaPart_Sheng_Ye c2 = new CotxeSegonaPart_Sheng_Ye("Ford", "Focus RS", TipusCanvi.CanviAutomatic, EstatsMotorCotxe.Aturat, MarxesAutomatic.N, MarxesManual.N);
         try {
-            System.out.println(coche.estadocoche);
-            coche.arrancarMotor();
-            System.out.println(coche.estadocoche);
-            System.out.println("Tiene:" + coche.getRevolucions() + "Revoluciones.");
-            coche.aturarMotor();
-            System.out.println(coche.estadocoche);
-        } catch (Exception e){
+            System.out.println(c2.getMarxaAutomatic());
+            c2.canviarMarxesAutomatic('+');
+            System.out.println(c2.getMarxaAutomatic());
+            c2.canviarMarxesAutomatic('-');
+            System.out.println(c2.getMarxaAutomatic());
+            c2.canviarMarxesAutomatic('-');
+            System.out.println(c2.getMarxaAutomatic());
+        }
+        catch (Exception e){
             System.out.println(e.getMessage());
         }
 
-        //Salidas de la instancia
-
-        System.out.println("Este es el coche" +  coche.marca  + "modelo "+  coche.model  + "Tipo de cambios " +   coche.tipuscanvi );
+        CotxeSegonaPart_Sheng_Ye c3 = new CotxeSegonaPart_Sheng_Ye("Ford", "Mustang", TipusCanvi.CanviManual, EstatsMotorCotxe.Aturat, MarxesAutomatic.N, MarxesManual.N);
+        try {
+            System.out.println(c3.getMarxaManual());
+            c3.canviarMarxesManual('+');
+            System.out.println(c3.getMarxaManual());
+            c3.canviarMarxesManual('+');
+            System.out.println(c3.getMarxaManual());
+            c3.canviarMarxesManual('+');
+            System.out.println(c3.getMarxaManual());
+            c3.canviarMarxesManual('+');
+            System.out.println(c3.getMarxaManual());
+            c3.canviarMarxesManual('+');
+            System.out.println(c3.getMarxaManual());
+            c3.canviarMarxesManual('-');
+            System.out.println(c3.getMarxaManual());
+            c3.canviarMarxesManual('-');
+            System.out.println(c3.getMarxaManual());
+        }
+        catch (Exception e){
+            System.out.println(e.getMessage());
+        }
     }
 }
