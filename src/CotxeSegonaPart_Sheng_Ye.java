@@ -72,9 +72,26 @@ public class CotxeSegonaPart_Sheng_Ye extends Cotxe_Sheng_Ye implements Interfac
         }
     }
 
-    public CanviarMarxaManual getMarxaManual() {
+    public enum CanviarMarxaManual {
+        R,
+        N,
+        primera,
+        segunda,
+        tercera,
+        cuarta,
+        quinta,
+        sexta;
+    }
+    public enum CanviarMarxaAutomatic {
+        F,
+        N,
+        R;
+    }
+
+    public CanviarMarxaManual getMarxaManual(){
         return marxaManual;
     }
+
 
     public CanviarMarxaAutomatic getMarxaAutomatic() {
         return marxaAutomatic;

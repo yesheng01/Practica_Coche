@@ -8,7 +8,7 @@
  **/
 public class TestCotxe2_Sheng_Ye {
     public static void main(String[] args) {
-        CotxeSegonaPart_Sheng_Ye c2 = new CotxeSegonaPart_Sheng_Ye("BMW", "X5", TipusCanvi.CanviAutomatic, EstatsMotorCotxe.Aturat, CanviarMarxaAutomatic.N, CanviarMarxaManual.N);
+        CotxeSegonaPart_Sheng_Ye c2 = new CotxeSegonaPart_Sheng_Ye("BMW", "X5", TipusCanvi.CanviAutomatic, EstatsMotorCotxe.Aturat, CotxeSegonaPart_Sheng_Ye.CanviarMarxaAutomatic.N, CotxeSegonaPart_Sheng_Ye.CanviarMarxaManual.N);
         try {
             System.out.println(c2.getMarxaAutomatic());
             c2.canviarMarxesAutomatic('+');
@@ -23,7 +23,7 @@ public class TestCotxe2_Sheng_Ye {
         }
         System.out.println("Este es automatico" + "\n\n");
 
-        CotxeSegonaPart_Sheng_Ye c3 = new CotxeSegonaPart_Sheng_Ye("Opel", "Zafira", TipusCanvi.CanviManual, EstatsMotorCotxe.Aturat, CanviarMarxaAutomatic.N, CanviarMarxaManual.primera);
+        CotxeSegonaPart_Sheng_Ye c3 = new CotxeSegonaPart_Sheng_Ye("Opel", "Zafira", TipusCanvi.CanviManual, EstatsMotorCotxe.Aturat, CotxeSegonaPart_Sheng_Ye.CanviarMarxaAutomatic.N, CotxeSegonaPart_Sheng_Ye.CanviarMarxaManual.primera);
         try {
             System.out.println(c3.getMarxaManual());
             c3.canviarMarxesManual('+');
