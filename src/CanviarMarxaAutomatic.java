@@ -6,7 +6,7 @@
  * Date : 13/12/20
  * Description:
  **/
-public enum MarxesAutomatic {
+public enum CanviarMarxaAutomatic {
     F,
     N,
     R;

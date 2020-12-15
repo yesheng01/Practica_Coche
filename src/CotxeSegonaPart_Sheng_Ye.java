@@ -7,9 +7,9 @@
  * Description:
  **/
 public class CotxeSegonaPart_Sheng_Ye extends Cotxe_Sheng_Ye implements InterfaceCotxe {
-    protected MarxesAutomatic marxaAutomatic;
-    protected MarxesManual marxaManual;
-    public CotxeSegonaPart_Sheng_Ye(String marca, String model, TipusCanvi tipuscanvi, EstatsMotorCotxe estatCotxe, MarxesAutomatic marxaAutomatic, MarxesManual marxaManual) {
+    protected CanviarMarxaAutomatic marxaAutomatic;
+    protected CanviarMarxaManual marxaManual;
+    public CotxeSegonaPart_Sheng_Ye(String marca, String model, TipusCanvi tipuscanvi, EstatsMotorCotxe estatCotxe, CanviarMarxaAutomatic marxaAutomatic, CanviarMarxaManual marxaManual) {
         super(marca, model, tipuscanvi, estatCotxe);
         if (tipuscanvi == TipusCanvi.CanviAutomatic) {
             this.marxaAutomatic = marxaAutomatic;
@@ -20,63 +20,63 @@ public class CotxeSegonaPart_Sheng_Ye extends Cotxe_Sheng_Ye implements Interfac
         }
     }
 
-        public void canviarMarxesAutomatic(char marxa) throws Exception {
-            //************
-            //------------CANVI AUTOMATIC
-            //************
-            //Feim una seria de IF per a recorrer la l'enum del tipus de marxa en aquest cas
-            //del canvi manual, pujant i baixant passant un + o - de parametre
-            if (tipuscanvi == TipusCanvi.CanviAutomatic && marxaAutomatic == MarxesAutomatic.R && marxa == '+') {
-                this.marxaAutomatic = MarxesAutomatic.N;
-            } else if (tipuscanvi == TipusCanvi.CanviAutomatic && marxaAutomatic == MarxesAutomatic.N && marxa == '+') {
-                this.marxaAutomatic = MarxesAutomatic.F;
-            } else if (tipuscanvi == TipusCanvi.CanviAutomatic && marxaAutomatic == MarxesAutomatic.F && marxa == '-') {
-                this.marxaAutomatic = MarxesAutomatic.N;
-            } else if (tipuscanvi == TipusCanvi.CanviAutomatic && marxaAutomatic == MarxesAutomatic.N && marxa == '-') {
-                this.marxaAutomatic = MarxesAutomatic.R;
-            }
-            else {
-                throw new Exception("Marxa no identificada");
-            }
-        }
-    public void canviarMarxesManual(char marxa) {
+    //Metodo de cambio de marxas manualmente de un coche
+    public void canviarMarxesManual(char marxa) throws Exception{
 
-        if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == MarxesManual.R && marxa == '+') {
-            this.marxaManual = MarxesManual.N;
-        } else if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == MarxesManual.N && marxa == '+') {
-            this.marxaManual = MarxesManual.primera;
-        } else if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == MarxesManual.primera && marxa == '+') {
-            this.marxaManual = MarxesManual.segunda;
-        } else if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == MarxesManual.segunda && marxa == '+') {
-            this.marxaManual = MarxesManual.tercera;
-        } else if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == MarxesManual.tercera && marxa == '+') {
-            this.marxaManual = MarxesManual.cuarta;
-        } else if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == MarxesManual.cuarta && marxa == '+') {
-            this.marxaManual = MarxesManual.quinta;
-        } else if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == MarxesManual.quinta && marxa == '+') {
-            this.marxaManual = MarxesManual.sexta;
-        } else if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == MarxesManual.sexta && marxa == '-') {
-            this.marxaManual = MarxesManual.quinta;
-        } else if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == MarxesManual.quinta && marxa == '-') {
-            this.marxaManual = MarxesManual.cuarta;
-        } else if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == MarxesManual.cuarta && marxa == '-') {
-            this.marxaManual = MarxesManual.tercera;
-        } else if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == MarxesManual.tercera && marxa == '-') {
-            this.marxaManual = MarxesManual.segunda;
-        } else if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == MarxesManual.segunda && marxa == '-') {
-            this.marxaManual = MarxesManual.primera;
-        } else if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == MarxesManual.primera && marxa == '-') {
-            this.marxaManual = MarxesManual.N;
-        } else if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == MarxesManual.N && marxa == '-') {
-            this.marxaManual = MarxesManual.R;
+        if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == CanviarMarxaManual.R && marxa == '+') {
+            this.marxaManual = CanviarMarxaManual.N;
+        } else if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == CanviarMarxaManual.N && marxa == '+') {
+            this.marxaManual = CanviarMarxaManual.primera;
+        } else if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == CanviarMarxaManual.primera && marxa == '+') {
+            this.marxaManual = CanviarMarxaManual.segunda;
+        } else if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == CanviarMarxaManual.segunda && marxa == '+') {
+            this.marxaManual = CanviarMarxaManual.tercera;
+        } else if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == CanviarMarxaManual.tercera && marxa == '+') {
+            this.marxaManual = CanviarMarxaManual.cuarta;
+        } else if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == CanviarMarxaManual.cuarta && marxa == '+') {
+            this.marxaManual = CanviarMarxaManual.quinta;
+        } else if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == CanviarMarxaManual.quinta && marxa == '+') {
+            this.marxaManual = CanviarMarxaManual.sexta;
+        } else if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == CanviarMarxaManual.sexta && marxa == '-') {
+            this.marxaManual = CanviarMarxaManual.quinta;
+        } else if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == CanviarMarxaManual.quinta && marxa == '-') {
+            this.marxaManual = CanviarMarxaManual.cuarta;
+        } else if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == CanviarMarxaManual.cuarta && marxa == '-') {
+            this.marxaManual = CanviarMarxaManual.tercera;
+        } else if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == CanviarMarxaManual.tercera && marxa == '-') {
+            this.marxaManual = CanviarMarxaManual.segunda;
+        } else if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == CanviarMarxaManual.segunda && marxa == '-') {
+            this.marxaManual = CanviarMarxaManual.primera;
+        } else if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == CanviarMarxaManual.primera && marxa == '-') {
+            this.marxaManual = CanviarMarxaManual.N;
+        } else if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == CanviarMarxaManual.N && marxa == '-') {
+            this.marxaManual = CanviarMarxaManual.R;
+        }
+        else {
+            throw new Exception("Marxa no identificada");
+        }
+    }
+//Metodo de marchas de cambio automatico.
+    public void canviarMarxesAutomatic(char marxa) throws Exception {
+        if (tipuscanvi == TipusCanvi.CanviAutomatic && marxaAutomatic == CanviarMarxaAutomatic.R && marxa == '+') {
+            this.marxaAutomatic = CanviarMarxaAutomatic.N;
+        } else if (tipuscanvi == TipusCanvi.CanviAutomatic && marxaAutomatic == CanviarMarxaAutomatic.N && marxa == '+') {
+            this.marxaAutomatic = CanviarMarxaAutomatic.F;
+        } else if (tipuscanvi == TipusCanvi.CanviAutomatic && marxaAutomatic == CanviarMarxaAutomatic.F && marxa == '-') {
+            this.marxaAutomatic = CanviarMarxaAutomatic.N;
+        } else if (tipuscanvi == TipusCanvi.CanviAutomatic && marxaAutomatic == CanviarMarxaAutomatic.N && marxa == '-') {
+            this.marxaAutomatic = CanviarMarxaAutomatic.R;
+        }
+        else {
+            throw new Exception("Marxa no identificada");
         }
     }
 
-    public MarxesManual getMarxaManual() {
+    public CanviarMarxaManual getMarxaManual() {
         return marxaManual;
     }
 
-    public MarxesAutomatic getMarxaAutomatic() {
+    public CanviarMarxaAutomatic getMarxaAutomatic() {
         return marxaAutomatic;
     }
 }
