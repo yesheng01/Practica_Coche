@@ -8,15 +8,15 @@
  **/
 public class TestCotxe2_Sheng_Ye {
     public static void main(String[] args) {
-        CotxeSegonaPart_Sheng_Ye c2 = new CotxeSegonaPart_Sheng_Ye("BMW", "X5", TipusCanvi.CanviAutomatic, EstatsMotorCotxe.Aturat, CotxeSegonaPart_Sheng_Ye.CanviarMarxaAutomatic.N, CotxeSegonaPart_Sheng_Ye.CanviarMarxaManual.N);
+        CotxeSegonaPart_Sheng_Ye c4 = new CotxeSegonaPart_Sheng_Ye("BMW", "X5", TipusCanvi.CanviAutomatic, EstatsMotorCotxe.Aturat, CotxeSegonaPart_Sheng_Ye.CanviarMarxaAutomatic.N, CotxeSegonaPart_Sheng_Ye.CanviarMarxaManual.N);
         try {
-            System.out.println(c2.getMarxaAutomatic());
-            c2.canviarMarxesAutomatic('+');
-            System.out.println(c2.getMarxaAutomatic());
-            c2.canviarMarxesAutomatic('-');
-            System.out.println(c2.getMarxaAutomatic());
-            c2.canviarMarxesAutomatic('-');
-            System.out.println(c2.getMarxaAutomatic());
+            System.out.println(c4.getMarxaAutomatic());
+            c4.canviarMarxesAutomatic('+');
+            System.out.println(c4.getMarxaAutomatic());
+            c4.canviarMarxesAutomatic('-');
+            System.out.println(c4.getMarxaAutomatic());
+            c4.canviarMarxesAutomatic('-');
+            System.out.println(c4.getMarxaAutomatic());
         }
         catch (Exception e){
             System.out.println(e.getMessage());
