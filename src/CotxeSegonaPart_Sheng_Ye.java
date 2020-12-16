@@ -19,7 +19,7 @@ public class CotxeSegonaPart_Sheng_Ye extends Cotxe_Sheng_Ye implements Interfac
 
     //Metodo de cambio de marxas manualmente de un coche
     public void canviarMarxesManual(char marxa) throws Exception{
-
+//Subidas de marchas
         if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == CanviarMarxaManual.R && marxa == '+') {
             this.marxaManual = CanviarMarxaManual.N;
         } else if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == CanviarMarxaManual.N && marxa == '+') {
@@ -35,6 +35,7 @@ public class CotxeSegonaPart_Sheng_Ye extends Cotxe_Sheng_Ye implements Interfac
         } else if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == CanviarMarxaManual.quinta && marxa == '+') {
             this.marxaManual = CanviarMarxaManual.sexta;
 
+//Bajada de marchas
 
         } else if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == CanviarMarxaManual.sexta && marxa == '-') {
             this.marxaManual = CanviarMarxaManual.quinta;
@@ -70,7 +71,7 @@ public class CotxeSegonaPart_Sheng_Ye extends Cotxe_Sheng_Ye implements Interfac
             throw new Exception("Marxa no identificada");
         }
     }
-
+//Clase añadida de enum de canviarmarxamanual
     public enum CanviarMarxaManual {
         R,
         N,
@@ -81,6 +82,7 @@ public class CotxeSegonaPart_Sheng_Ye extends Cotxe_Sheng_Ye implements Interfac
         quinta,
         sexta
     }
+//Clase añadida de enum de canviarmarxautomatico
     public enum CanviarMarxaAutomatic {
         F,
         N,
