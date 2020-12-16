@@ -79,12 +79,12 @@ public class CotxeSegonaPart_Sheng_Ye extends Cotxe_Sheng_Ye implements Interfac
         tercera,
         cuarta,
         quinta,
-        sexta;
+        sexta
     }
     public enum CanviarMarxaAutomatic {
         F,
         N,
-        R;
+        R
     }
 
     public CanviarMarxaManual getMarxaManual(){
