@@ -6,6 +6,7 @@
  * Date : 13/12/20
  * Description:
  **/
+
 public class CotxeSegonaPart_Sheng_Ye extends Cotxe_Sheng_Ye implements InterfaceCotxe {
     protected CanviarMarxaAutomatic marxaAutomatic;
     protected CanviarMarxaManual marxaManual;
@@ -37,6 +38,8 @@ public class CotxeSegonaPart_Sheng_Ye extends Cotxe_Sheng_Ye implements Interfac
             this.marxaManual = CanviarMarxaManual.quinta;
         } else if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == CanviarMarxaManual.quinta && marxa == '+') {
             this.marxaManual = CanviarMarxaManual.sexta;
+
+
         } else if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == CanviarMarxaManual.sexta && marxa == '-') {
             this.marxaManual = CanviarMarxaManual.quinta;
         } else if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == CanviarMarxaManual.quinta && marxa == '-') {

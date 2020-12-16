@@ -38,8 +38,6 @@ public class TestCotxe2_Sheng_Ye {
             System.out.println(c3.getMarxaManual());
             c3.canviarMarxesManual('-');
             System.out.println(c3.getMarxaManual());
-            c3.canviarMarxesManual('-');
-            System.out.println(c3.getMarxaManual());
         }
         catch (Exception e){
             System.out.println(e.getMessage());
