@@ -12,14 +12,10 @@ public class CotxeSegonaPart_Sheng_Ye extends Cotxe_Sheng_Ye implements Interfac
     protected CanviarMarxaManual marxaManual;
     public CotxeSegonaPart_Sheng_Ye(String marca, String model, TipusCanvi tipuscanvi, EstatsMotorCotxe estatCotxe, CanviarMarxaAutomatic marxaAutomatic, CanviarMarxaManual marxaManual) {
         super(marca, model, tipuscanvi, estatCotxe);
-        if (tipuscanvi == TipusCanvi.CanviAutomatic) {
             this.marxaAutomatic = marxaAutomatic;
-            this.marxaManual = null;
-        } else {
-            this.marxaAutomatic = null;
             this.marxaManual = marxaManual;
         }
-    }
+
 
     //Metodo de cambio de marxas manualmente de un coche
     public void canviarMarxesManual(char marxa) throws Exception{
