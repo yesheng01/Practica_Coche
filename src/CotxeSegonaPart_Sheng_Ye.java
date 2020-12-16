@@ -19,7 +19,7 @@ public class CotxeSegonaPart_Sheng_Ye extends Cotxe_Sheng_Ye implements Interfac
 
     //Metodo de cambio de marxas manualmente de un coche
     public void canviarMarxesManual(char marxa) throws Exception{
-//Subidas de marchas
+//Subidas de marchas cuando esta en manual  en "+" se le va subiendo las marchas
         if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == CanviarMarxaManual.R && marxa == '+') {
             this.marxaManual = CanviarMarxaManual.N;
         } else if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == CanviarMarxaManual.N && marxa == '+') {
@@ -35,7 +35,7 @@ public class CotxeSegonaPart_Sheng_Ye extends Cotxe_Sheng_Ye implements Interfac
         } else if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == CanviarMarxaManual.quinta && marxa == '+') {
             this.marxaManual = CanviarMarxaManual.sexta;
 
-//Bajada de marchas
+//Bajada de marchas , cuando pones en un "-" le va bajando las marchas
 
         } else if (tipuscanvi == TipusCanvi.CanviManual && marxaManual == CanviarMarxaManual.sexta && marxa == '-') {
             this.marxaManual = CanviarMarxaManual.quinta;
